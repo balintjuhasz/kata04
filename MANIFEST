@@ -1,0 +1,4 @@
+lib/Kata04/Weather.pm
+Makefile.PL
+MANIFEST
+weather.dat
