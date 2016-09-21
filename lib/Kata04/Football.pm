@@ -10,6 +10,7 @@ sub run {
     use warnings;
 
     use File::Slurp;
+    use Kata04::Common;
 
     my @file = read_file('football.dat');
     my @diff;
@@ -41,7 +42,7 @@ sub run {
     my $lowest = (sort { $a <=> $b } @diff)[0];
 
     ## Output
-    print($lowest, "\n");
+    print(Kata04::Common::lowest(@diff), "\n");
 }
 
 1;
