@@ -1,7 +1,7 @@
 package Kata04::Weather 1.0;
  
 use Exporter qw(import);
- 
+
 our @EXPORT_OK = qw(run);
  
 sub run {
@@ -10,6 +10,7 @@ sub run {
 	use warnings;
 
 	use File::Slurp;
+        use Kata04::Common;
 
 	my @file = read_file('weather.dat');
 	my @spread;
@@ -34,12 +35,7 @@ sub run {
 		push(@spread, $max-$min);
 	}
 
-	## Find the lowest spread:
-	## lowest index in a numerically sorted array
-	my $lowest = (sort { $a <=> $b } @spread)[0];
-
-	## Output
-	print($lowest, "\n");
+        print(Kata04::Common::lowest(@spread), "\n");
 }
 
 1;
