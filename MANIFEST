@@ -1,4 +1,6 @@
 lib/Kata04/Weather.pm
+lib/Kata04/Football.pm
 Makefile.PL
 MANIFEST
 weather.dat
+football.dat
